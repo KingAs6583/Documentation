@@ -1,0 +1,227 @@
+
+<!-- 
+HTML5
+Removed Tags : <acronym> <applet> <basefont> <big> <center> <dir> <font> <frame> <frameset>
+    <noframes> <strike> <tt>
+
+Alternative of above is css and <abbr> <object> <ul> <s> or<del>
+
+                New Tags
+    1.<article> : define an article in a document
+    2.<aside> : define content aside from the page content
+    3.<details> : define additional details that the user can view or hide
+    4.<figure> / <figcaptio> : define define self contained content define caption for a figure element
+    5.<footer> : define a footer for a document or section
+    6.<header> : define a header for a document or section
+    7.<main> : define the main content of a document
+    8.<nav> : define navigation links
+    9.<progress> : Represent the progress of a task
+    10.<section> : define a sction in a document
+    11.<summary> : define a visibleheading for a details element
+    12.<wbr> : define a possible line break
+
+    Non Sematic element : <div> <span>
+    Semantic element : <form> <footer> and <article>
+
+    HTML5 Input Types
+
+    color, date, datetime ,datetime-local,, email ,month ,number ,range ,search ,tel ,time ,url, week
+
+    <Canvas> : it is an element used to draw graphic on the fly via js 
+    canvas it act as container all workis done by javascript
+    suited for graphic intensive games
+    No support for event handler
+    You can save the resulting image as .png or .jpg
+    
+    * methods drawing, path , boxes, circle, text, and adding image
+
+    <SVG> : it stand for scalable vector graphics
+    it is used to define graphic for web and highly recommended
+    Not suited for games application
+    support event handlers
+    slow rendering
+    best suited for application with large rendering area (google maps)
+
+    * Rectangle<rect> circle<circle> Ellipse<ellipse> line<line> polyline<polyline> ploygon<polygon> path<path>
+
+    <audio> : element specifies a standard way to embed audio in a web page
+    control attribute adds audo control like play ,pause, and volume
+    <source> :it allows as to specify alternative audio file which the brower may choose fromthe brower will
+    use the first recognized format
+    <audio> text </audio> tags will only be displayed in brower tht not support
+
+    <video> : to play video attributes muted ,loop, controls , auto play 
+
+ -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Documentation_CSS3.css">
+
+    <title>HTML5 Documentation</title>
+
+</head>
+<body>
+    <header>
+    <h1>King AS</h1> <hr>
+    <nav>menu   Home    About us    </nav>    
+    </header> <hr>
+    <section style="width: 70%;">
+        <article>
+            Fonts in css 
+
+        font-family : it is use to change face of a font
+        font-style : it is use to make font italic or oblique
+        font-variant : it is use to create a small-caps effect
+        font-size : it is use to set font size
+        font-weight : it is use to specify font weight
+
+        </article>
+        
+    </section>
+
+    <form >
+
+        <label for="User Name"> User Name</label><br>
+        <input type="text" /> <br>
+        <label >password</label> <br>
+        <input type="password"/> <br>
+        <label>Email id</label> <br>
+        <input type="email"> <br>
+        date <br><input type="date" name="date" id="date"> <br>
+        datetime <br><input type="time" name="time" id=""> <br>
+        month <br> <input type="month" name="month" min="Feb" id=""> <br>
+        number <br> <input type="number" max="5" min="1" name="number" id=""> <br>
+        range <br> <input type="range" name="range" max="10" id=""> <br>
+        search <br> <input type="search" name="search" id=""> <br>
+        week <br> <input type="week" name="week" id=""> <br>
+        url <br> <input type="url" name="url" id=""> <br>
+        file <br> <input type="file" name="file" id=""> <br>
+        color <br> <input type="color" name="color" id=""> <br>
+        <br><input type="submit" value="submit"> <br>
+
+    </form> <br>
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" strocke-width="4" fill="yellow" />
+    </svg> <br>
+
+    <canvas id="canvas" width="600" height="200" ></canvas> <br>
+
+    ,<audio controls src="/home/kingas/web_developement/Java_script/Resources/kun_faya_kun.mp3" type="mp3">
+        support by brower
+    </audio> <br>
+
+    <video controls width="400" autoplay muted loop src="/home/kingas/Videos/Mohabbatein(2000).mkv" type="video/mkv"></video>
+     <br>   <!-- autoplay is use play auto and muted mean mute the video --> <br>
+
+     <details id="dms">
+            <summary>Date base Management System</summary>
+            <p>1st data down all sql commands in a notes or in HTMl or text file<br>
+               2nd write the detail about the commands<br>
+               3rd know how to access sql with other programming languages</p>
+        </details> <br>
+
+        <progress value="50" max="100">value</progress> <br>
+        
+    <aside><p>
+    Box model in css
+
+    content : it consist text and images appear
+    padding : clears an area around the content it is transparent
+    border : A border that goes around the padding and content
+    margin : clears an area outside the border it is also transparent
+
+    </p></aside> <br>
+    <marquee  direction="left">CSS3 start</marquee> <br>
+    <!-- css3 -->
+    <p id="word-wrap">CSS3 : it has features like rounded corners, shadows, text effects , transitions and or animation
+    as well as new layouts like multi-columns flexible box etc
+    in CSS3 features
+    Text Effects  : text shodow
+    Font : font family
+    Animation
+    Transition
+    Multiple column layout
+    Background size
+    user interface
+    2d/3d transformation
+    flexbox</p> <br>
+
+    <div class="logo_anime">
+        <img src="/home/kingas/web_developement/Java_script/Resources/logo_as.png" alt="logo">
+    </div> <br>
+
+    <div style="text-align: center;" >
+        <img class="transition" src="/home/kingas/web_developement/Java_script/Resources/logo_as.png" alt="logo-transtion">
+        <h3>move mouse cursor to here </h3>
+    </div> <br>
+
+    <div class="multi-column">
+        <p>
+            it is property which used to animate the object without using flash or any other application
+it support images and gif
+@keyframe use to create animation bind it to selector
+animation : it required name and duration for animation
+Keyframes-selector : required % of animation duration
+0-100%
+from(same as 0%)
+to(same as 100%) in between can add 50%
+        </p>
+    </div> <br>
+
+    <div class="background"></div> <br>
+    <div>
+        <img class="border3" src="/home/kingas/web_developement/Java_script/Resources/road_image.jpg" alt="border">
+    </div> <br>
+
+    <div>
+        <label for="textarea">Text area drag the below box</label> <br>
+        <textarea class="form-control"></textarea>
+    </div><br>
+
+    <div class="box-size">
+        <p class="para"> Box sizing is imp </p>
+    </div> <br>
+
+    <div>
+        <p class="text-effects">This is an text effect</p>
+    </div> <br>
+
+    <section class="join_gradient">
+        <div style="width: 100px; height: 50px;"></div>
+    </section> <br>
+<!-- Note an element may have multiple  class like class="class1 class2"-->
+    <div class="flex">  
+        <div><button>like</button></div>
+        <div><button>like</button></div>
+        <div><button>like</button></div>
+    </div> <br>
+
+    <br>
+    <a href="https://www.w3schools.com/css/default.asp"> learn css </a> <br> <br>
+    <a href="https://www.w3schools.com/tags/tag_summary.asp"> learn html tags </a> <br>
+    <h3>Note : do may check about respective tags in google and property of css  also</h3><br> <br>
+
+    <footer>
+        <div style="background-color: aqua; width: 100%; height: 90px;">Footer</div>
+    </footer> <br>
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.beginPath();
+    ctx.rect(100,50,200,100);
+    ctx.fillStyle = 'green';
+    ctx.fill(); // to fill the inside color of the box
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = 'black';
+    // ctx.moveTo(0,0);
+    // ctx.lineTo(200,100);
+    ctx.stroke();// to fill the border color
+</script>
+</body>
+</html>

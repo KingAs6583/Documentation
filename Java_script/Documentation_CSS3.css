@@ -1,0 +1,184 @@
+/* 
+    CSS3 : it has features like rounded corners, shadows, text effects , transitions and or animation
+    as well as new layouts like multi-columns flexible box etc
+    in CSS3 features
+    Text Effects  : text shodow
+    Font : font family
+    Animation
+    Transition
+    Multiple column layout
+    Background size
+    user interface
+    2d/3d transformation
+    flexbox
+*/
+
+form{
+    border: 1px solid greenyellow;
+    padding-left: 10px;
+}
+
+/* text shadow and word wrap */
+#word-wrap{
+    text-shadow: 2px 2px 2px blue;
+    transition: transform 2s;
+    word-wrap: break-word;
+}
+
+/* fonts in css */
+@font-face {
+    font-family: sanfer;
+    src: url('url to font');
+}
+
+/* Animation in css3 */
+/* it is property which used to animate the object without using flash or any other application
+it support images and gif
+@keyframe use to create animation bind it to selector
+animation : it required name and duration for animation
+Keyframes-selector : required % of animation duration
+0-100%
+from(same as 0%)
+to(same as 100%) in between can add 50%
+*/
+
+.logo_anime{
+    width: 100%;
+    height: 100px;
+    background-color: turquoise;
+    position: relative;
+}
+.logo_anime img{
+    width: 140px;
+    height: 120px;
+    position: absolute;
+    left: 0; top: -15px;
+    animation-name: logo_an;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes logo_an {
+    from{left: 0}
+    to{left: 85%}
+}
+/* animation end */
+
+/*
+ Transition in css3 
+it is a effect is a such an effect that lets n element gradually
+change from one style to another style when hover
+main 4 porperties
+1.transition-property
+2.transition-duration
+3.transition-timing-function
+4.transition-delays
+*/
+
+.transition{
+    width: 50px; height: 50px;
+    transition-property: width,height; /*it is an property to be effect by all or height , width  we can add transform*/
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+.transition:hover{
+width: 100px; height: 100px;
+transform: scale(2,2); /* transform */
+}
+
+/* Multiple columns in css3
+it is an advance feature ofcss3 which is used for creating the newspaper layout you can create your articles to multiple
+columns even if it is in one paragraph
+1.column-count
+2.column-rule
+3.column-gap
+*/
+
+.multi-column{
+    column-count: 3;
+    column-gap: 50px;
+    column-rule: solid;
+    text-align: justify;
+}
+
+/* background in css3
+it is an affords which is used to resizing of the background properties
+it is use to fix the size of background
+background-origin
+background-origin:border-box
+background-origin:content-box
+*/
+
+.background{
+    width: 300px; height: 300px;
+    background-image: url('/home/kingas/web_developement/Java_script/Resources/road_image.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* border in css3
+it reduce effort of photoshop and other graphical application
+border-radius - create rounded corners
+box-shadow - create shadow of border
+*/
+.border3{
+    border-radius: 50px;
+    width: 300px; height: 300px;
+    background-size: 100% 100%;
+    box-shadow: 4px 4px;
+}
+
+/* user interface
+it has 3 types
+1.resize
+2.box-sizing = width + padding + border
+3.outline-offset
+*/
+.form-control{
+    resize: horizontal; /* it mean we can drag horizental */
+    overflow: auto;
+}
+
+.box-size{
+    width: 300px; height: 100px;
+    background: red;
+    padding-left: 30px;
+    box-sizing: border-box;
+
+}
+
+/* 2D transform in css3
+it has 5 types of methods
+1.translate() : method the element moves from its current position depending on the parameters given for left (x-axis) and the top (y-axis)
+2.rotate() : the element rotates clockwise at given degree negative values are allowed and
+rotates the element counter clockwise
+3.scale() : the element increase or decrease the size depending on the parameters given
+for width (x-axis) and height(y-axis)
+4.skew() : the element turns in a given angle dpending on the parametrs given for the
+horizontal (x-axis) and vertical (y-axis) lines
+5.matrix() : method combine all of the 2d transform methods into one
+*/
+.para{
+    transform: translateY(50px);
+}
+.text-effects:hover{
+    transform: rotate(360deg);
+}
+
+/*  lineear gradient*/
+.join_gradient{
+    background-image: linear-gradient(red,yellow);;
+    /* background-image: linear-gradient(to left,green,red);; */
+}
+
+/* flex box */
+.flex{
+    width: 100%; height: 100px;
+    background-image: linear-gradient(to left, #f650fe,#607bf5);;
+    display: flex;
+    flex-direction: row; /* it can have column also instead of row*/
+    justify-content: space-around;
+    align-items: center;
+}

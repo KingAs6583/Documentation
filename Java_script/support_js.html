@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Supporting JS HTMl 
+        </title>
+        
+    </head>
+    <body>
+
+        <h1 id="heading1"> Good Morning King AS </h1>
+        <p class="par">You Will do it bro believe in your self King AS</p>
+        <p id="pa"></p>
+        <button onclick="changeText()" >Click Here</button>
+        <span>
+            <a href="#">
+                <span class="test" id="span2">
+                    <br>inline Event<br>
+                </span>
+            </a>
+        </span>
+
+        <span>
+            <a href="#">
+                <span class="test" id="span3">
+                    <br> Event Listener <br>
+                </span>
+            </a>
+        </span>
+
+        <span>
+            <a href="#">
+                <span class="test" id="span4">
+                    <br> Event object <br>
+                </span>
+            </a>
+        </span>
+
+        <!-- mouse event -->
+        <p id="mouse" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        this paragraph is about mouse event which trigger by the functions
+        </p>
+
+        <div>
+            <h4 id="h4">mouseEvnet by addEventListener </h4>
+        </div>
+
+        <!-- keyboard event -->
+        <input  type="text" onkeypress="keyPress()" onkeydown="keyDown()"/>
+        <p id="p2"></p>
+
+        <!-- Input event  -->
+        <label>
+            <select id="select" name="list" onchange="selectElement()">
+            <option value="">select any</option>
+            <option value="chocolate">chocolate</option>
+            <option value="vanila">vanila</option>
+            </select>
+        </label>
+        <br>
+        <div id="result"></div>
+
+        <!-- time event -->
+        <div>
+            <p>waiting</p>
+            <p id="response"></p>
+            <button onclick="myvar = setTimeout(res,2000)">click here</button>
+            <button onclick="clearTimeout(myvar)">clear time</button>
+        </div>
+
+        <div>
+            <p id="p3">stop it</p><br>
+            <button id="start1">start</button>
+            <button id="stop">stop</button>
+        </div>
+
+        <script>
+            function changeText() {
+               let val;
+               val = document.getElementById('heading1');
+               val.innerHTML = "Hi King AS"
+
+               var clas = document.getElementsByClassName('par');
+               
+               document.querySelector('#pa').innerHTML = "query selector use";
+               /* it select for only single element
+                  use it if you want to change only one front class instance
+                  it will change first accessed element
+                # for id . for class '#id', '.class'
+                document.querySelector('tag.class');
+                getElementById is best and faster
+               */
+            }
+                //inline event
+                const inline = document.getElementById('span2');
+                inline.onclick = function(){    //anomoyanes function
+                    alert("inline function");
+                    document.getElementById('pa').innerHTML = "check";
+                    //note it will work if script is in body tag
+                }
+
+                const eventListen = document.getElementById('span3');
+                eventListen.addEventListener('click',() => {
+                    //callback function :mean passing a function as argument
+                    alert('event listtener');
+                });
+
+                let EventObject = document.getElementById('span4');
+
+                const checkEvent = () =>{
+                    alert("hi");
+                    console.log(event);
+                    console.log(event.target);
+                    console.log(event.type);
+                    //check this in inspect 
+                }
+
+                EventObject.addEventListener('click',checkEvent);
+
+                function mouseDown() {
+                    document.getElementById('mouse').style.color = "green";
+                }
+                function mouseUP() {
+                    document.getElementById('mouse').style.color = "red";
+                }
+
+                let mouseListener = document.getElementById('h4');
+
+                mouseListener.addEventListener('mouseenter',()=>{
+                    mouseListener.style.backgroundColor = "red";
+                });
+
+                mouseListener.addEventListener('mouseleave',()=>{
+                    mouseListener.style.backgroundColor = "green";
+                });
+
+                //keyboad event
+
+                const keyPress = () => {
+                    document.getElementById('p2').innerHTML=`key press ${event.key} and code ${event.code}`;
+                }
+                const keyDown = () => {
+                    document.getElementById('p2').innerHTML="key Down";
+                }
+                
+                //input event
+                const selectElement = () =>{
+                    const select = document.getElementById('select').value;
+                    document.getElementById('result').innerHTML = `${select}`;
+                }
+
+                //time event
+                let response = document.querySelector("#response");
+                function res() {
+                    alert("hi");
+                    response.innerHTML="response"
+                }
+               
+               let paragraph = document.getElementById('p3');
+               let num =0;
+               let timeref;
+               let btn = document.getElementById('start1');
+                response = ()=>{
+                   timeref = setInterval(()=>{
+                        paragraph.innerHTML = `${num}`;
+                        num++;
+                    },1000)
+                }
+                btn.addEventListener('click',response);
+
+                const stop1 = document.getElementById('stop');
+                stop1.addEventListener('click',()=>{
+                    clearInterval(timeref);
+                });
+
+
+        </script>
+
+            
+    </body>
+</html>
+
+
+
+

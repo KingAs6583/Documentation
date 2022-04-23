@@ -1,0 +1,243 @@
+/* 
+
+css : it stand for cascading style sheet
+
+    Inserting style in html
+    1.Internal : inside <sytle> css code </style>
+    2.External : link to html by <link>
+    3.inline : <tage style="color : green;"> value </tage>
+
+    #id : id unqiue
+    .class : class apply to all
+    * : universal to apply to whole html
+
+    Css Background Property : valid name "read" | Hex value "#ff0000" |  RGB "rgb(255,0,0)"
+
+        Fonts in css 
+
+        font-family : it is use to change face of a font
+        font-style : it is use to make font italic or oblique
+        font-variant : it is use to create a small-caps effect
+        font-size : it is use to set font size
+        font-weight : it is use to specify font weight
+
+        can add font-family from google by link
+    
+    Boarder in css
+
+        Lists in css
+
+    Box model in css
+
+    content : it consist text and images appear
+    padding : clears an area around the content it is transparent
+    border : A border that goes around the padding and content
+    margin : clears an area outside the border it is also transparent
+
+        Scroll bars
+
+        Visible : Allow the content to overflow the border of its containing element
+        Hidden : The content of the nested element is simply cut off at the border of the containing
+        element and no scrollbars is visible
+        Scroll : The size of the containing element does not change but the scrollbar are added to allow the user to scroll 
+        to see the contet in vertical and horizental order
+        Auto : The purpose is the same as scroll but the scrollbar will be shown only
+        if content does overflow
+        
+    Positioning in css
+
+    Relative : it mean present place is consider as position normal
+    Absolute : it mean element is positioned relative to the first parent element that has a position
+    other than static
+
+        Z-Index : it mean property specifies the stack order of an element
+        An element with greater stack order is always in front of an element with lower stack order
+        Note: it only works on positioned elements (absolute,relative or fixed)
+
+    CSS Float
+    Left : The element float to the left of its container
+    Right : The element float to the right of its container
+
+        CSS Display : it is most imp css property for controlling layout
+        Every HTML element has a default value depending on what type of element it is
+        The default display value for most element is block or inline
+
+*/
+
+h1{
+    color: aqua;
+}
+
+/* list */
+
+ul{
+    list-style-type: circle;
+}
+
+/* flaoting and menu */
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+.logo{
+    width: 30%;
+    line-height: 80px; /*center*/
+    text-align: center;
+    background-color: aquamarine;
+    float: left; /* float use move element left in div */
+}
+.menu{
+    width: 70%;
+    line-height: 49px;
+    background-color: cornflowerblue;
+    float: right;
+}
+
+#list1{
+    list-style: none;
+    text-align: right;
+    background-color: red;
+}
+li{
+    display: inline-block;
+    /* border: 1px solid black; */
+    padding: 0 10px;
+}
+
+/* positioning */
+.father{
+    width: 600px;
+    height: 300px;
+    background-color: red;
+    position: relative;
+}
+
+.child1{
+    width: 100px;
+    height: 60px;
+    background-color: green;
+    position: absolute;
+    left: 0;
+    /* z-index word if left right remove*/
+    z-index: 1;
+}
+.child2{
+    width: 100px;
+    height: 60px;
+    background-color: yellow;
+    position: absolute;
+    right: 0;
+}
+.child3{
+    width: 100px;
+    height: 60px;
+    background-color: orangered;
+    position: absolute;
+    bottom: 0;
+}
+.child4{
+    width: 100px;
+    height: 60px;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* positioning end */
+
+/* scroll bar */
+.scroll{
+    width: 400px;
+    height: 400px;
+    /* overflow: hidden; */
+    /* overflow: auto; */
+    overflow: scroll;
+}
+
+/* Box model */
+.boxModel{
+    width: 400px;
+    height: 200px;
+    background-color: darkcyan;
+
+}
+
+input{
+    padding: 5px 5px 5px 5px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+/* box model end */
+
+/* link in css  un visited */
+a:link{
+    color: red;
+}
+/* visited link */
+a:visited{
+    color: green;
+}
+/* mouse over */
+a:hover{
+    color: yellow;
+}
+/* selected link */
+a:active{
+    color: blue;
+}
+
+/* Border in css */
+.border{
+    width: 500px;
+    height: 300px;
+    background-color: aqua;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    /* border: 5px dashed green; */
+    border-radius: 50px;
+}
+
+#unq{
+    /* Text in css*/
+    color: greenyellow;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    direction: ltr;
+    text-indent: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.divider{
+    /* background */
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+    background-image: url('/home/kingas/web_developement/Java_script/Resources/mountain_image.jpg');
+    background-repeat: repeat-y; 
+    background-size: 90% 90%;
+    background-attachment: fixed;
+}
+
+/* here background-repeat : mean repeat the background 
+    horizental repeat-x
+    vertical repeat-y
+    paralise website : mean image on image
+*/
+
+.div2{
+    width: 100%;
+    height: 100vh;
+    background-color: blue;
+    background-image: url('/home/kingas/web_developement/Java_script/Resources/water_image.jpg');
+    background-repeat: no-repeat; 
+    background-size: 90%;
+    background-attachment: fixed;
+}
+
+.heading_class{
+    color: red;
+}
